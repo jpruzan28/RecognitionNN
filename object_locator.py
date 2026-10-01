@@ -615,7 +615,8 @@ def main():
         # Imported here rather than at the top: webcam_demo itself imports this file
         # (for BoxRegressor and prepare), and it needs OpenCV, which training doesn't.
         from webcam_demo import run_webcam
-        run_webcam(model=model, device=device, camera=args.camera)
+        # Face recognition (who is it?) only makes sense for the face model.
+        run_webcam(model=model, device=device, camera=args.camera, recognize=args.dataset == "faces")
 
 
 # On Windows, code that may start extra processes must sit behind this guard.

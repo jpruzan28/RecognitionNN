@@ -3,3 +3,6 @@
 __pycache__/
 my_image_prediction.png
 results/*/gallery/
+# Personal: enrolled face photos and anything computed from them
+faces_db/
+results/face_id/
